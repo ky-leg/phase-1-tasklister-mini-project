@@ -13,5 +13,11 @@ const form = document.getElementById('create-task-form')
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log(event.target.input.value)
+  let li = document.createElement('li')
+  let xBtn = document.createElement('button')
+  xBtn.textContent = 'x'
+  li.innerText = `${inputField.value} `
+  li.appendChild(xBtn)
+  list.appendChild(li)
 });
+
